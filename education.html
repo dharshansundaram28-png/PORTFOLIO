@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Dharshan S</title>
+  <meta name="description" content="Educational background of Dharshan S.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 0;
+    }
+
+    /* Gradient timeline line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 24px;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent-color), #8b5cf6, transparent);
+      border-radius: 3px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    /* Glowing timeline dot */
+    .timeline-dot {
+      position: absolute;
+      left: 14px;
+      top: 20px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      border: 5px solid var(--accent-color);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.4);
+      z-index: 2;
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      position: relative;
+      transition: all var(--transition-normal);
+      overflow: hidden;
+    }
+
+    /* Hover glow effect for the card */
+    .timeline-content::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    .timeline-item:hover .timeline-content {
+      transform: translateY(-5px);
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .timeline-item:hover .timeline-content::before {
+      opacity: 1;
+    }
+
+    .timeline-content h3 {
+      color: var(--text-primary);
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .timeline-content h4 {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .timeline-content h4::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 2px;
+      background: var(--text-secondary);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--glass-border);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge.highlight {
+      background: rgba(59, 130, 246, 0.1);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #60a5fa;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 19px; }
+      .timeline-dot { left: 9px; }
+      .timeline-item { padding-left: 55px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Dharshan<span style="color: var(--accent-color);">.</span></a>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html" class="active" aria-current="page">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Education</h2>
+          <p>My academic journey and qualifications.</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item reveal-left delay-100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Bachelor of Engineering (B.E.)</h3>
+              <h4>Computer Science and Engineering</h4>
+              
+              <div class="timeline-meta">
+                <span class="badge">🏫 Shree Venkateshwara Hi-Tech Engineering College, Gobichettipalayam</span>
+                <span class="badge">📅 Expected Graduation: 2027</span>
+                <span class="badge highlight">🎯 Final Year Student</span>
+              </div>
+              
+              <p>Currently pursuing my Bachelor's degree with a focus on core computer science subjects, software engineering principles, and hands-on project development. Actively exploring full-stack web development and cloud technologies.</p>
+            </div>
+          </div>
+          
+          <!-- Example for a secondary dot to show the gradient line effect properly, even if empty -->
+          <div class="timeline-item reveal-left delay-200" style="opacity: 0.5;">
+            <div class="timeline-dot" style="box-shadow: none; border-color: var(--text-secondary); background: transparent;"></div>
+            <div class="timeline-content" style="padding: 10px; text-align: center;">
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Previous Education History...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Dharshan S. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

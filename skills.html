@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Dharshan S</title>
+  <meta name="description" content="Technical skills and proficiencies of Dharshan S.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Professional Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxl);
+    }
+
+    .skills-category {
+      position: relative;
+    }
+
+    .skills-category-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .skills-category-header h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .category-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--glass-border), transparent);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--spacing-lg);
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-md) var(--spacing-lg);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--accent-gradient);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: transparent;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .skill-card:hover::before {
+      opacity: 0.1;
+    }
+
+    .skill-icon {
+      font-size: 2.2rem;
+      color: var(--text-secondary);
+      transition: color 0.4s ease, transform 0.4s ease;
+      z-index: 1;
+    }
+
+    .skill-card:hover .skill-icon {
+      color: var(--text-primary);
+      transform: scale(1.1);
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      z-index: 1;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Dharshan<span style="color: var(--accent-color);">.</span></a>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html" class="active" aria-current="page">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Technical Expertise</h2>
+          <p>Technologies and tools I work with to build scalable applications.</p>
+        </div>
+        
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skills-category reveal delay-100">
+            <div class="skills-category-header">
+              <h3>Programming</h3>
+              <div class="category-line"></div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="devicon-python-plain skill-icon"></i>
+                <div class="skill-name">Python</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-java-plain skill-icon"></i>
+                <div class="skill-name">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skills-category reveal delay-200">
+            <div class="skills-category-header">
+              <h3>Frontend</h3>
+              <div class="category-line"></div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="devicon-html5-plain skill-icon"></i>
+                <div class="skill-name">HTML5</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-css3-plain skill-icon"></i>
+                <div class="skill-name">CSS3</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-javascript-plain skill-icon"></i>
+                <div class="skill-name">JavaScript</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-bootstrap-plain skill-icon"></i>
+                <div class="skill-name">Bootstrap</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-react-original skill-icon"></i>
+                <div class="skill-name">React.js</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skills-category reveal delay-300">
+            <div class="skills-category-header">
+              <h3>Backend</h3>
+              <div class="category-line"></div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="devicon-nodejs-plain skill-icon"></i>
+                <div class="skill-name">Node.js</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-express-original skill-icon"></i>
+                <div class="skill-name">Express.js</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-flask-original skill-icon"></i>
+                <div class="skill-name">Flask</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skills-category reveal delay-400">
+            <div class="skills-category-header">
+              <h3>Database</h3>
+              <div class="category-line"></div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="devicon-mysql-plain skill-icon"></i>
+                <div class="skill-name">MySQL</div>
+              </div>
+              <div class="skill-card">
+                <i class="devicon-mongodb-plain skill-icon"></i>
+                <div class="skill-name">MongoDB</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="skills-category reveal delay-500">
+            <div class="skills-category-header">
+              <h3>Cloud</h3>
+              <div class="category-line"></div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="1em" height="1em">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+                <div class="skill-name">Cloud Basics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Dharshan S. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
