@@ -29,6 +29,12 @@
   text-decoration: none;
 }
 
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .logo-mark {
   background: var(--accent-gradient);
   color: #fff;
