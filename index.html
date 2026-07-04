@@ -116,10 +116,12 @@
       flex-wrap: wrap;
     }
 
+    /* FIXED: Better alignment for Icon and Text inside the button */
     .btn-download {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center; /* Centers content horizontally on mobile width: 100% */
+      gap: 10px;
       padding: 12px 24px;
       background: transparent;
       border: 1.5px solid rgba(255, 255, 255, 0.35);
@@ -262,9 +264,9 @@
         flex-direction: column;
       }
 
-      .action-buttons .btn {
+      /* FIXED: Keeping download button layout consistent with other full-width buttons on mobile */
+      .action-buttons .btn, .action-buttons .btn-download {
         width: 100%;
-        text-align: center;
       }
 
       .floating-badge {
@@ -307,7 +309,6 @@
 
       <div class="container hero-grid">
 
-        <!-- Text Content -->
         <div class="hero-text-content reveal active">
           <span class="greeting-badge">👋 Welcome to my portfolio</span>
 
@@ -336,7 +337,6 @@
           </div>
         </div>
 
-        <!-- Image Content -->
         <div class="hero-image-content reveal delay-200 active">
           <div class="image-wrapper">
             <img src="assets/images/dharshan.png" alt="Dharshan S" class="hero-profile-img">
